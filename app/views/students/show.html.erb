@@ -1,0 +1,10 @@
+<h1>Présentation</h1>
+
+Prénom: <%= @student.firstname %><br/>
+Nom: <%= @student.lastname %><br/> 
+Age : <%= @student.age %> (<%= @student.date_of_birth.to_formatted_s(:rfc822)  %>)
+
+<br />
+<%= link_to "Editer", edit_student_url(@student) %>
+<br />
+<%= link_to "Liste", students_url %>

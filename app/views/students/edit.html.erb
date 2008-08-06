@@ -1,0 +1,24 @@
+
+<%= error_messages_for 'student' %>
+
+<h1>Student</h1>
+
+<% form_for @student do |s| %>
+
+  <%= s.label :firstname, "Prénom" %><br />
+  <%= s.text_field :firstname %><br />
+  
+  <%= s.label :lastname, "Nom" %><br />
+  <%= s.text_field :lastname %><br />
+  
+  <%= s.label :date_of_birth, "Date de naissance" %><br />
+  <%= s.date_select :date_of_birth %><br />
+  
+  <%= submit_tag "Enregistrer" %>
+<% end %>
+
+<br />
+<%= link_to "Liste", students_url %>
+
+
+

@@ -1,0 +1,8 @@
+<p>
+  <%= link_to student.fullname, student %> <br />
+  <% if student.major? %>
+    Age : <%= student.age %> ans
+  <% end %> 
+</p>
+<%= link_to "Edit", edit_student_url(student) %>
+<hr />
