@@ -6,8 +6,8 @@ class Student < ActiveRecord::Base
   validates_presence_of :date_of_birth
   
   named_scope :scientifics, :conditions => {:section => "S"}
-  named_scope :majors     , lambda { { :conditions => ['date_of_birth < ?', 18.years.ago] } }
-  named_scope :minors     , lambda { { :conditions => ['date_of_birth > ?', 18.years.ago] } }
+  named_scope :majors     , :conditions => ['date_of_birth < ?', 18.years.ago]
+  named_scope :minors     , :conditions => ['date_of_birth > ?', 18.years.ago]
 
   
   def to_param
